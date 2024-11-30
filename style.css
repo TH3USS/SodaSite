@@ -114,6 +114,7 @@ header nav a{
     height: 100vh;
     overflow: hidden;
     position: relative;
+    overflow: visible;
 }
 
 .banner .product{
@@ -161,4 +162,29 @@ header nav a{
 
 .banner .product:hover .soda:nth-child(2){
     opacity: 1;
+}
+
+.splash{
+    position: absolute;
+    inset: 0 0 0 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.splash img{
+    margin-top: 26.5em;
+    margin-left: -6em;
+    position: absolute;
+    transition: 0.7s;
+    width: 50em;
+    filter: hue-rotate(110deg);
+}
+
+.banner:has(.product:hover) .splash img{
+    margin-top: 24.5em;
+    margin-left: -16em;
+    position: absolute;
+    transition: 0.7s;
+    width: 70em;
+    filter: hue-rotate(0deg);
 }
