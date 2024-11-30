@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-body{
+body {
     font-family: Poppins;
     margin: 0;
     font-size: 13px;
-    background-color: #181614;
+    background-color: #000000;
     color: #eee;
 }
 
-a{
+a {
     text-decoration: none;
     cursor: pointer;
     font-weight: bold;
 }
 
-header{
+header {
     width: 100%;
     position: fixed;
     z-index: 100;
@@ -23,13 +23,13 @@ header{
     margin-top: 10px;
 }
 
-header nav a{
+header nav a {
     color: #eee;
     font-size: small;
     margin: 0 30px;
 }
 
-.tab{
+.tab {
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -38,7 +38,7 @@ header nav a{
     background-size: 50%;
 }
 
-.tab .container{
+.tab .container {
     width: 1140px;
     max-width: 100%;
     height: 100%;
@@ -48,12 +48,24 @@ header nav a{
     position: relative;
 }
 
-#intro{
-    background-color: #181614;
+#intro {
+    position: relative;
+}
+
+.back {
+    position: absolute;
+    z-index: -1;
+}
+
+.back img{
+    filter: blur(2px);
+    opacity: 0.07;    
+    filter: hue-rotate(120deg);
+    width: 100vw;
 }
 
 
-#intro .content{
+#intro .content {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -63,13 +75,13 @@ header nav a{
 }
 
 #intro .content .name,
-#intro .content .job{
+#intro .content .job {
     font-size: 9em;
     font-family: Righteous;
     line-height: 1em;
 }
 
-.text-gradient{
+.text-gradient {
     font-size: 1.5em;
     line-height: 0.8em;
     background-image: linear-gradient(to right, #45e4e4, #cac13e);
@@ -78,26 +90,26 @@ header nav a{
     -webkit-background-clip: text;
 }
 
-#intro .content .des{
+#intro .content .des {
     margin-top: 1.2em;
     width: 70%;
 }
 
-#intro .content a{
+#intro .content a {
     margin-top: 1.2em;
 }
 
-.tab{
+.tab {
     position: fixed;
     inset: 0 0 0 0;
     z-index: 1;
 }
 
-#intro{
+#intro {
     z-index: 2;
 }
 
-.tab.active{
+.tab.active {
     --x: 50%;
     --y: 50%;
     clip-path: circle(0 at var(--x) var(--y));
@@ -105,19 +117,19 @@ header nav a{
 }
 
 @keyframes showTab {
-    to{
+    to {
         clip-path: circle(200% at var(--x) var(--y));
     }
 }
 
-.banner{
+.banner {
     height: 100vh;
     overflow: hidden;
     position: relative;
     overflow: visible;
 }
 
-.banner .product{
+.banner .product {
     position: absolute;
     width: 500px;
     height: 500px;
@@ -131,7 +143,7 @@ header nav a{
     margin-left: 30em;
 }
 
-.banner .product .soda{
+.banner .product .soda {
     background:
         var(--url) var(--left) 0,
         url(./93f11499-def0-490e-abb1-a2edc563398d\(1\).png);
@@ -147,31 +159,31 @@ header nav a{
     transform: translateX(-50%);
 }
 
-.banner .product:hover{
+.banner .product:hover {
     --left: -1000px;
     transform: translateX(-50%) translateY(-120px);
 }
 
-.banner:has(.product:hover) .text-gradient{
+.banner:has(.product:hover) .text-gradient {
     background-image: linear-gradient(to right, #cac13e, #bb2323);
 }
 
-.banner .product .soda:nth-child(2){
+.banner .product .soda:nth-child(2) {
     opacity: 0;
 }
 
-.banner .product:hover .soda:nth-child(2){
+.banner .product:hover .soda:nth-child(2) {
     opacity: 1;
 }
 
-.splash{
+.splash {
     position: absolute;
     inset: 0 0 0 0;
     pointer-events: none;
     z-index: -1;
 }
 
-.splash img{
+.splash img {
     margin-top: 26.5em;
     margin-left: -6em;
     position: absolute;
@@ -180,11 +192,17 @@ header nav a{
     filter: hue-rotate(110deg);
 }
 
-.banner:has(.product:hover) .splash img{
+.banner:has(.product:hover) .splash img {
     margin-top: 24.5em;
     margin-left: -16em;
     position: absolute;
     transition: 0.7s;
     width: 70em;
+    filter: hue-rotate(0deg);
+}
+
+.banner:has(.product:hover) .back img { 
+    filter: blur(2px);
+    opacity: 0.07; 
     filter: hue-rotate(0deg);
 }
