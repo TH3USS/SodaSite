@@ -52,16 +52,15 @@ header nav a {
     position: relative;
 }
 
-.back {
-    position: absolute;
-    z-index: -1;
-}
 
 .back img{
+    position: absolute;
     filter: blur(2px);
-    opacity: 0.07;    
+    opacity: 0.05;    
     filter: hue-rotate(120deg);
     width: 100vw;
+    margin-top: -20em;
+    margin-left: -85em;
 }
 
 
@@ -109,19 +108,6 @@ header nav a {
     z-index: 2;
 }
 
-.tab.active {
-    --x: 50%;
-    --y: 50%;
-    clip-path: circle(0 at var(--x) var(--y));
-    animation: showTab 1s ease-in-out 1 forwards;
-}
-
-@keyframes showTab {
-    to {
-        clip-path: circle(200% at var(--x) var(--y));
-    }
-}
-
 .banner {
     height: 100vh;
     overflow: hidden;
@@ -143,7 +129,7 @@ header nav a {
     margin-left: 30em;
 }
 
-.banner .product .soda {
+.banner .product .sodas .soda {
     background:
         var(--url) var(--left) 0,
         url(./93f11499-def0-490e-abb1-a2edc563398d\(1\).png);
@@ -159,20 +145,20 @@ header nav a {
     transform: translateX(-50%);
 }
 
-.banner .product:hover {
+.banner .product .sodas:hover .soda {
     --left: -1000px;
     transform: translateX(-50%) translateY(-120px);
 }
 
-.banner:has(.product:hover) .text-gradient {
+.banner:has(.soda:hover) .text-gradient {
     background-image: linear-gradient(to right, #cac13e, #bb2323);
 }
 
-.banner .product .soda:nth-child(2) {
+.banner .product .sodas .soda:nth-child(2) {
     opacity: 0;
 }
 
-.banner .product:hover .soda:nth-child(2) {
+.banner .product .sodas:hover .soda:nth-child(2) {
     opacity: 1;
 }
 
@@ -192,8 +178,8 @@ header nav a {
     filter: hue-rotate(110deg);
 }
 
-.banner:has(.product:hover) .splash img {
-    margin-top: 24.5em;
+.banner:has(.soda:hover) .splash img {
+    margin-top: 15.5em;
     margin-left: -16em;
     position: absolute;
     transition: 0.7s;
@@ -201,8 +187,7 @@ header nav a {
     filter: hue-rotate(0deg);
 }
 
-.banner:has(.product:hover) .back img { 
-    filter: blur(2px);
-    opacity: 0.07; 
+.banner:has(.soda:hover) .back img {
+    transition: 0.7s;
     filter: hue-rotate(0deg);
 }
