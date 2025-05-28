@@ -1,18 +1,19 @@
-# Exemplo de site para apresentação de uma bebida  
+# Example of a Beverage Presentation Website
 
-Site => [![Beverage Presentation](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)](https://th3uss.github.io/SodaSite/)  
+Site => [![Beverage Presentation](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)](https://th3uss.github.io/SodaSite/)
 
-### Um site interativo para apresentar uma bebida com uma lata animada!  
+### An interactive website to showcase a beverage with an animated can!
 
-Este projeto apresenta uma lata animada que muda de rótulo ao passar o mouse, criando uma experiência visual dinâmica para a apresentação de uma bebida.  
+This project features an animated can that changes its label when hovered over, creating a dynamic visual experience for presenting a beverage.
 
 <hr>  
 
-## Sobre o Projeto  
-Oi, eu sou o Matheus 👋<br>  
-Esse é um projeto feito com o intuito de colocar em prática conceitos aprendidos de **HTML** e **CSS**.  
-O objetivo foi criar um site que utiliza animações e efeitos de interação para tornar a apresentação da bebida mais atrativa e visualmente impactante.  
+## About the Project
+
+Hi, I'm Matheus 👋<br>
+This project was created with the purpose of practicing concepts learned in **HTML** and **CSS**.
+The goal was to build a site that uses animations and interactive effects to make the beverage presentation more attractive and visually impactful.
 
 <br>  
 
-> Este projeto foi desenvolvido como uma forma de treinar animações e interações com **CSS**, aprimorando minha habilidade em criar experiências visuais envolventes.  
+> This project was developed as a way to practice animations and interactions with **CSS**, improving my skills in creating engaging visual experiences.
